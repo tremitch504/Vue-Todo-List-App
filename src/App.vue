@@ -62,7 +62,7 @@ const addTodo = () => {
             <span class="bubble professional"></span>
             <div>Professional Business Work</div>
           </label>
-
+  
           <label for="">
             <input type="radio" name="category" id="" value="Personal" v-model="inputCategory" />
             <span class="bubble personal"></span>
