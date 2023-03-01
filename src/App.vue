@@ -53,7 +53,7 @@ const addTodo = () => {
     <form @submit.prevent="addTodo">
         <h4>What do you want to do?</h4>
         <input type="text" placeholder="ex. Go on a cruise" v-model="inputFieldData">
-
+ 
         <h4>Choose a category</h4>
 
         <div class="options">
