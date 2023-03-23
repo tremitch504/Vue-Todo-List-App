@@ -25,7 +25,7 @@ onMounted(() => {
 })
 
 const addTodo = () => {
-
+  
 }
 </script>
 
@@ -47,12 +47,12 @@ const addTodo = () => {
 
   <section class="create-todo">
     <h3>
-      CREATE A TODO
+      MAKE A TODO
     </h3>
 
     <form @submit.prevent="addTodo">
         <h4>What do you want to do?</h4>
-        <input type="text" placeholder="ex. Go on a cruise" v-model="inputFieldData">
+        <input class="formInput" type="text" placeholder="ex. Go on a cruise" v-model="inputFieldData">
  
         <h4>Choose a category</h4>
 
@@ -60,7 +60,7 @@ const addTodo = () => {
           <label for="">
             <input type="radio" name="category" id="" value="Professional Business Work" v-model="inputCategory" />
             <span class="bubble professional"></span>
-            <div>Professional Business Work</div>
+            <div>Career Work</div>
           </label>
   
           <label for="">
@@ -69,6 +69,9 @@ const addTodo = () => {
             <div>Personal</div>
           </label>
         </div>
+         
+        <button class="todo-btn" type="submit">Add TODO</button>
+        <!-- <input type="submit" value="Add todo" /> -->
     </form>
   </section>
 </main>

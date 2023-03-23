@@ -38,6 +38,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #7149C6 ;
 }
 
 h1 {
@@ -71,9 +72,77 @@ button:focus-visible {
 #app {
   max-width: 1280px;
   margin: 0 auto;
+  margin-top: 5rem;
   padding: 2rem;
+  border-radius: 5px;
   text-align: center;
+  background-color: #FFDEB9;
+  
 }
+
+
+.welcome input{
+  margin-left: 0.5rem;
+  flex: 1 1 0%;
+  min-width: 0;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* background-color: #FFDEB9; */
+}
+
+/* outline: when user press on input and it gives it an outline */
+.formInput {
+  width: 300px;
+  border: 1px solid #D8D8D8;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+
+/* .create-todo{
+  display: grid;
+  width: 100%;
+} */
+
+/* margin bottom: going to determain the space from an element */
+.options {
+  display: grid;
+  grid-gap: 1rem;
+  /* margin: 0 auto; */
+  /* margin-bottom: 1.5rem; */
+  /* width: 75%; */
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 1.5rem;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #FC2947;
+  border-radius: 0.5rem;
+  /* box-shadow: 0 1px 3px rgba(0,0, 0, 0.1); */
+  cursor: pointer;
+}
+
+.todo-btn {
+  /* display: block; */
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+
+/* .bubble {
+  display: flex;
+  align-items: center;
+} */
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -87,3 +156,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+
+
+
+
+/* Color Scheme
+#7149C6 purple color
+#FC2947 red color
+#FE6244 orange color
+#FFDEB9 tan color*/
