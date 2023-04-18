@@ -42,7 +42,7 @@ ourTodos.value.push({
   createdAt: new Date().getTime()  //get our date of when the todo content is added
 })
 
-inputFieldData.value = ''
+inputFieldData.value = ''  
 inputCategory.value = null
 }
 
