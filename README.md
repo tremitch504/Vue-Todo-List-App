@@ -1,6 +1,6 @@
 # Vue ToDo List App
 
-Vue ToDo List is an application for Vue.Js to organize and keep track of tasks that a user wants to achieve and get done.
+Vue ToDo List is an application for Vue.Js and Vue 3 to organize and keep track of tasks that a user wants to achieve and get done.
 
 
 <img src="./Screenshots/webpageSC.png" alt="No Screenshot" width="738" />
