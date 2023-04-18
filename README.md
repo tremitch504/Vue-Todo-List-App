@@ -3,7 +3,7 @@
 Vue ToDo List is an application for Vue.Js to organize and keep track of tasks that a user wants to achieve and get done.
 
 
-## Rub Locally
+## Run Locally
 Clone the project
 
 ```bash
