@@ -50,7 +50,7 @@ const deleteTodo = (todo) => {
 //we can filter out the array and only return the todo that equal with the given todo that needs to be removed
 ourTodos.value = ourTodos.value.filter(data => data !== todo);
 
-}
+} 
 
 
 watch(ourTodos, (newInputVal) => {
