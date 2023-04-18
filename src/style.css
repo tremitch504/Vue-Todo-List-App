@@ -90,7 +90,6 @@ button:focus-visible {
   background: none;
   font-size: 1.5rem;
   font-weight: 700;
-  /* background-color: #FFDEB9; */
 }
 
 /* outline: when user press on input and it gives it an outline */
@@ -103,18 +102,11 @@ button:focus-visible {
   outline: none;
 }
 
-/* .create-todo{
-  display: grid; 
-  width: 100%;
-} */
 
 /* margin bottom: going to determain the space from an element */
 .options {
   display: grid;
   grid-gap: 1rem;
-  /* margin: 0 auto; */
-  /* margin-bottom: 1.5rem; */
-  /* width: 75%; */
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 1.5rem;
 }
@@ -127,21 +119,111 @@ button:focus-visible {
   padding: 1.5rem;
   background-color: #FC2947;
   border-radius: 0.5rem;
-  /* box-shadow: 0 1px 3px rgba(0,0, 0, 0.1); */
   cursor: pointer;
 }
 
 .todo-btn {
-  /* display: block; */
   padding: 1rem 1.5rem;
+  border-radius: 0.5rem; 
+}
+/* have a way when you hover over the options lable it changes the button and color */
+/* have a way when you hover over the button it change colors */
+.options label:hover {
+  background-color: #F6F1E9;
+}
+
+/* padding can make an element thick */
+/* border-radius can make the corners and outline of an element more toned thick in shape */
+.todo-item  {
+  background-color: #F9F5EB;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
   border-radius: 0.5rem;
 }
 
+/* here we just add on to our todo-item style */
 
-/* .bubble {
+.todo-item .todo-value {
+  flex: 1 1 0%;
+}
+
+
+.todo-item .todo-value input{
+  color: #313154;
+  font-size: 1.125rem;
+}
+
+/* target the todo input so the background or border won't be visble */
+.todo-value input[type="text"] {
+ border: none;
+ background-color: #F9F5EB;
+ outline: none;
+}
+
+.todo-item .activity button{
+  background-color: #FC2947;
+  color: white;
+}
+
+
+
+/* used this to get rid of the orginal radio checkpoint so we can use the bubble */
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+/* this is targetting the bubble to be around the radio checkpoint */
+.bubble {
   display: flex;
   align-items: center;
-} */
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #62CDFF;
+  box-shadow: 0px 0px 4px #62CDFF;
+}
+
+/* This will target the bubble for the personal option */
+.bubble.personal {
+  border-color: #B2A4FF;
+  box-shadow: 0px 0px 4px #B2A4FF;
+}
+
+/* After a user have selected the option */
+.bubble::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: #62CDFF;
+  box-shadow: 0px 0px 4px #62CDFF;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+/* We have to change the color of the checked circle point when the user selects personal option */
+.bubble.personal::after {
+  background-color: #B2A4FF;
+  box-shadow: #B2A4FF;
+}
+
+/* when an option is selected, we will have a smaller bubble to appear and display */
+input:checked ~ .bubble::after {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/* we are targetting the text of the options label */
+.options label div {
+  color: #313154;
+  font-size: 1.2rem;
+  margin-top: 1.1rem;
+}
 
 
 @media (prefers-color-scheme: light) {
