@@ -52,6 +52,18 @@ ourTodos.value = ourTodos.value.filter(data => data !== todo);
 
 } 
 
+// Use this function to change the state of filterTodo
+const updateFilter = (value) => {
+  filterTodo.value = value;
+  // console.log(filterTodo.value);
+}
+
+//watching what changes the state of filterToDo
+watch(filterTodo, (newFilter) => {
+localStorage.setItem('filterTodo', newFilter);
+console.log(newFilter); 
+});
+
 
 watch(ourTodos, (newInputVal) => {
   localStorage.setItem('ourTodos', JSON.stringify(newInputVal));
@@ -111,8 +123,9 @@ watch(ourTodos, (newInputVal) => {
   <section class="list">
 <h3>LIST OF TODOS</h3>
 
+<template v-for="todo in todosOrder">
 <div class="todos-list">
-<div v-for="todo in todosOrder" :class="`todo-item ${todo.done && 'done'}`">
+<div :class="`todo-item ${todo.done && 'done'}`">
 <label>
     <input type="checkbox" v-model="todo.done" />
     <span :class="`bubble ${todo.category == 'Professional Business Work' ? 'Professional Business Work' : 'personal'}`"></span>
@@ -122,12 +135,13 @@ watch(ourTodos, (newInputVal) => {
     <input type="text" v-model="todo.todo" />
   </div>
 
-  <div class="activity">
-    <button class="delete" @click="deleteTodo(todo)">Delete </button>
+  <div class="activity"> 
+    <button class="delete" @click="deleteTodo(todo)">Delete </button> 
   </div>
 </div>
 
 </div>
+</template>
   </section>
 
 </main>
