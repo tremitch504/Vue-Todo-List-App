@@ -65,7 +65,7 @@ watch(ourTodos, (newInputVal) => {
 <!-- Our data will be organized by date -->
 <!-- watch: will watch for any changes in our state or ref, and will update our local storage  -->
 
-<template>
+<template> 
 <main class="app">
 
   <section class="welcome">
