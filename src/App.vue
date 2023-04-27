@@ -49,20 +49,7 @@ inputCategory.value = null
 const deleteTodo = (todo) => {
 //we can filter out the array and only return the todo that equal with the given todo that needs to be removed
 ourTodos.value = ourTodos.value.filter(data => data !== todo); 
-
-} 
-
-// Use this function to change the state of filterTodo
-const updateFilter = (value) => {
-  filterTodo.value = value;
-  // console.log(filterTodo.value);
 }
-
-//watching what changes the state of filterToDo
-watch(filterTodo, (newFilter) => {
-localStorage.setItem('filterTodo', newFilter);
-console.log(newFilter); 
-});
 
 
 watch(ourTodos, (newInputVal) => {
